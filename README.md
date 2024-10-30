@@ -34,8 +34,8 @@ This project serves as the back-end for a film-finder platform, offering the fol
 ## Technologies
 
 - **Node.js 22**: The framework used to build the application.
-- **Mongoose**: ORM for database interactions with PostgreSQL.
-- **MongoDb**: Relational database used for data storage.
+- **Mongoose**: ORM for database interactions with MongoDb.
+- **MongoDb**: Non-Relational database used for data storage.
 - **Socket.io**: use for online chat
 - **Docker**: Containerization for deployment and isolated environments.
 - **JWT**: JSON Web Tokens for secure authentication and authorization.
@@ -60,61 +60,45 @@ Ensure that you have the following installed:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Amiirchg/E_commerce.git
+    git clone https://github.com/Amiirch/film-finder.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd Shopping_API
+    cd film-finder
     ```
 
-3. Configure the connection string in the `appsettings.json` file to point to your PostgreSQL instance.
+3. Configure the connection string in the `main.js` file to point to your MongoDb instance.
 
 4. Restore the dependencies:
 
     ```bash
-    dotnet restore
+    npm install
     ```
 
-5. Set up the PostgreSQL database using Entity Framework Core migrations:
+5. Run the application:
 
     ```bash
-    dotnet ef database update
-    ```
-
-6. Run the application:
-
-    ```bash
-    dotnet run
+    nest start
     ```
 
 ---
 
 ### Installation With Docker
 
-1. Set up Docker containers for PostgreSQL and Redis using the `docker-compose.yml` file:
+1. Ensure the correct connection string in the `main.js` file, then build app with docker:
 
     ```bash
-    docker compose up --build
-    ```
-
-2. Ensure the correct connection string in the `appsettings.json` file, then run migrations to update the PostgreSQL database:
-
-    ```bash
-    dotnet ef database update
+    docker-compose up --build
     ```
 
 ---
-
-## Usage
-
-Once the application is running, you can access the API via Swagger for testing and documentation at:
 
 --- 
 ### Running Tests
 
 for running Test just do it :
    ```bash
-   dotnet test
+   npm test
    ```
