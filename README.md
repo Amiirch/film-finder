@@ -1,6 +1,6 @@
 # film-finder Project
 
-This is a Node.Js-based film-finder project that provides a RESTful API for managing movie finding. The project includes authentication and authorization, uses MongoDb with Mongoose for data persistence, socket.io for online chat as support team, and is containerized using Docker. The project also implements unit tests with jest.
+This is a Node.Js-based film-finder project that provides a RESTful API for managing movie finding. The project includes authentication and authorization, uses MongoDb with Mongoose for data persistence, socket.io for online chat as support team, and is containerized using Docker. The project also implements unit tests with jest and uses Swagger for API testing and documentation.
 
 ## Table of Contents
 
@@ -28,6 +28,7 @@ This project serves as the back-end for a film-finder platform, offering the fol
 - Mongo.Db for data storage with Mongoose
 - Docker for easy deployment and containerization
 - Unit tests to ensure code quality and reliability
+- Swagger for interactive API documentation and testing
 
 ---
 
